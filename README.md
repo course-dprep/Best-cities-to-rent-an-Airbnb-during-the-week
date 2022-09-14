@@ -2,7 +2,7 @@
 
 ## Introduction
 Welcome ot the 'most appealing cities to rent your Airbnb during the week' repository. 
-This README provides detailed instructions on how to use the contents in this repository in the future.
+This README provides detailed instructions on how to use the contents in this repository for future use.
 
 
 ## Example of reproducible research workflow
