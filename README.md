@@ -1,7 +1,7 @@
-# Most appealing cities to rent your Airbnb during the week
+# Most appealing cities in the US to rent an Airbnb during the week
 
 ## Introduction
-Welcome ot the 'most appealing cities to rent your Airbnb during the week' repository. 
+Welcome ot the 'most appealing cities in the US to rent an Airbnb during the week' repository. 
 This README provides detailed instructions on how to use the contents in this repository for future use.
 
 
