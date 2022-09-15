@@ -8,7 +8,7 @@ This README provides detailed instructions on how to use the contents in this re
 ## Motivation
 Airbnb is started in 2007, when two hosts opened their San Francisco home to three guests. Since then, it has expanded to over 4 million hosts and more than 1 billion guest arrivals in practically every nation on earth. Through the internet marketplace Airbnb, homeowners who wish to rent out their properties can connect with travelers looking for accommodation in particular areas. 
 
-Previously, Airbnbs were mostly rented on weekends. While renters still show up on weekends, weekday stays are becoming increasingly popular in the U.S. People who rent out an Airbnb are quickly inclined to lower their prices for renting the Airbnb during the week, while instead, they can increase prices because of the increasing demand. By gathering and analyzing data, it is possible to find out in which U.S. cities there is a higher demand for stays during the week. The general question for this study project is as follows: “Which U.S. cities are most appealing to rent your private room during the week?”
+Previously, Airbnbs were mostly rented on weekends. While renters still show up on weekends, weekday stays are becoming increasingly popular in the U.S. People who rent out an Airbnb are quickly inclined to lower their prices for renting the Airbnb during the week, while instead, they can increase prices because of the increasing demand. By gathering and analyzing data, it is possible to find out in which U.S. cities there is a higher demand for stays during the week. The general question for this study project is as follows: “*Which U.S. cities are most appealing to rent your private room during the week?*”
 
 
 ## Example of reproducible research workflow
