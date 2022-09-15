@@ -1,5 +1,11 @@
-# Example of reproducible research workflow TEST
+# Most appealing cities in the US to rent an Airbnb during the week
 
+## Introduction
+Welcome ot the 'most appealing cities in the US to rent an Airbnb during the week' repository. 
+This README provides detailed instructions on how to use the contents in this repository for future use.
+
+
+## Example of reproducible research workflow
 This is a basic example repository using Gnu make for a reproducible research workflow, as described in detail here: [tilburgsciencehub.com](http://tilburgsciencehub.com/). 
 
 The main aim of this to have a basic structure, which can be easily adjusted to use in an actual project.  In this example project, the following is done: 
