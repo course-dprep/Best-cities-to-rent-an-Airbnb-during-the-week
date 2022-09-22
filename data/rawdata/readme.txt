@@ -12,11 +12,11 @@ Example data for rudimentary example of working with build tools.
 
 2. Composition of dataset (what's in the data?)
 
-Simulated data.
+Simulated data
 
 3. Collection process (how was the data collected?)
 
-Data is downloaded from web. See src/data-preparation/download_data.R. 
+Data is downloaded from web! See src/data-preparation/download_data.R. 
 
 4. Preprocessing/cleaning/labeling (how was the data cleaned, if at all?)
 
