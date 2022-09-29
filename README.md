@@ -12,7 +12,7 @@ Airbnb is started in 2007, when two hosts opened their San Francisco home to thr
 
 Previously, Airbnbs were mostly rented on weekends. While renters still show up on weekends, weekday stays are becoming increasingly popular in the U.S. People who rent out an Airbnb are quickly inclined to lower their prices for renting the Airbnb during the week, while instead, they can increase prices because of the increasing demand. By gathering and analyzing data, it is possible to find out in which U.S. cities there is a higher demand for stays during the week. The general question for this study project is as follows: 
 
-**“*Which U.S. cities are most appealing to rent your private room during the week?*”**
+**“*To what extent does the increase interest in weekday stays in the U.S. affect the price of a weekday private room? Does this affect differ between the XX cities in the U.S.?*”**
 
 Read the generated research file by goign to XXXX(nog invullen, linkje naar het document met de resultaten)
 
@@ -49,6 +49,10 @@ Thos is the repository for the course [Data Preparation and Workflow Management]
 - Caroline Bloemendaal, c.a.bloemendaal@tilburguniversity.edu
 
 ### More resources
+
+Onderstaande bronnen moeten nog verwerkt worden, daarnaast ook nog extra bronnen zoeken: 
+- https://www.airdna.co/blog/5-airbnb-guest-trends-to-watch
+- https://www.businesstravelexecutive.com/news/weekday-us-hotel-occupancy-hits-pandemic-era-high 
 
 ## Example of reproducible research workflow
 This is a basic example repository using Gnu make for a reproducible research workflow, as described in detail here: [tilburgsciencehub.com](http://tilburgsciencehub.com/). 
