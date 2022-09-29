@@ -10,7 +10,11 @@ This README provides detailed instructions on how to use the contents in this re
 ## Motivation
 Airbnb is started in 2007, when two hosts opened their San Francisco home to three guests. Since then, it has expanded to over 4 million hosts and more than 1 billion guest arrivals in practically every nation on earth. Through the internet marketplace Airbnb, homeowners who wish to rent out their properties can connect with travelers looking for accommodation in particular areas. 
 
-Previously, Airbnbs were mostly rented on weekends. While renters still show up on weekends, weekday stays are becoming increasingly popular in the U.S. People who rent out an Airbnb are quickly inclined to lower their prices for renting the Airbnb during the week, while instead, they can increase prices because of the increasing demand. By gathering and analyzing data, it is possible to find out in which U.S. cities there is a higher demand for stays during the week. The general question for this study project is as follows: “*Which U.S. cities are most appealing to rent your private room during the week?*”
+Previously, Airbnbs were mostly rented on weekends. While renters still show up on weekends, weekday stays are becoming increasingly popular in the U.S. People who rent out an Airbnb are quickly inclined to lower their prices for renting the Airbnb during the week, while instead, they can increase prices because of the increasing demand. By gathering and analyzing data, it is possible to find out in which U.S. cities there is a higher demand for stays during the week. The general question for this study project is as follows: 
+
+**“*Which U.S. cities are most appealing to rent your private room during the week?*”**
+
+Read the generated research file by goign to XXXX(nog invullen, linkje naar het document met de resultaten)
 
 ## Method
 
@@ -20,6 +24,11 @@ Previously, Airbnbs were mostly rented on weekends. While renters still show up 
 
 ## How to run the analyses? 
 ### Required software / programs 
+To run the fle you must have installed to following programs:
+- [R and R-studio](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/)
+- [Make](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/)
+- [Git Bash](https://gitforwindows.org/) (windows user) of terminal (mac user)
+- [pandoc](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/pandoc/) is needed to convert a markdown file to PDF
 
 ### R libraries 
 
@@ -28,8 +37,16 @@ Previously, Airbnbs were mostly rented on weekends. While renters still show up 
 ### Running the workflow
 
 ### Data sources for this research 
+- Airbnb data use available at [Inside Airbnb](http://insideairbnb.com/get-the-data/)
 
 ### Authors
+Thos is the repository for the course [Data Preparation and Workflow Management](https://dprep.hannesdatta.com/) at Tilburg University as part of the Master's program Marketing Analytics, used for the team project of group 2.
+
+- Bo de Ruijter, b.deruijter@tilburguniversity.edu
+- Pepijn de Vries, p.j.devries@tilburguniversity.edu
+- Amber Pullens, a.pullens@tilburguniversity.edu
+- Anouk Lamers, a.j.f.lamers@tilburguniversity.edu
+- Caroline Bloemendaal, c.a.bloemendaal@tilburguniversity.edu
 
 ### More resources
 
