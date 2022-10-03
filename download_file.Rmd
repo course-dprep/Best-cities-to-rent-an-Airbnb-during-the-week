@@ -12,9 +12,6 @@ This R script is used to download datasets from InsideAirBnB.com, which will lat
 Step 1)
 Installing and running the required packages:
 ```{r packages}
-install.packages("tidyverse")
-install.packages("readr")
-
 library(tidyverse)
 library(readr)
 ```
