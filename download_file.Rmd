@@ -9,7 +9,6 @@ output:
   word_document: default
 ---
 # Download InsideAirBnB data
-
 ## This R script is used to download datasets from InsideAirBnB.com, which will later be used, after further cleaning and preparing, for analysis of AirBnB pricing in relation to weekends and weekdays.
 
 ### Step 1) Installing and running the required packages:
