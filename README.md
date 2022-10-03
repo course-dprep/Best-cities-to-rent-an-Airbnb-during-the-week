@@ -12,7 +12,7 @@ Airbnb is started in 2007, when two hosts opened their San Francisco home to thr
 
 Previously, Airbnbs were mostly rented on weekends. While renters still show up on weekends, weekday stays are becoming increasingly popular in the U.S. People who rent out an Airbnb are quickly inclined to lower their prices for renting the Airbnb during the week, while instead, they can increase prices because of the increasing demand. By gathering and analyzing data, it is possible to find out in which U.S. cities there is a higher demand for stays during the week. The general question for this study project is as follows: 
 
-**“*To what extent does the increase interest in weekday stays in the U.S. affect the price of a weekday private room? Does this affect differ between the XX cities in the U.S.?*”**
+**“*To what extent does the increase interest in weekday stays in the U.S. affect the price of a weekday private room? Does this effect differ between the XX cities in the U.S.?*”**
 
 Read the generated research file by goign to XXXX(nog invullen, linkje naar het document met de resultaten)
 
