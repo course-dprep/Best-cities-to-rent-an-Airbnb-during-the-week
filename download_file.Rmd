@@ -15,7 +15,6 @@ output:
 
 ```{r packages}
 library(tidyverse)
-library(readr)
 ```
 
 ### Step 2) Creating lists of the urls that need to be downloaded: (2 lists need to be created, one for the listings and one for the calender data)
