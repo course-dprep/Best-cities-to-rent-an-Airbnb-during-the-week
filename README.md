@@ -18,10 +18,18 @@ The general question for this study project is as follows:
 
 Next to that, it could be interesting to find out if this trend also exists in Europe. Therefore, the following cities in Europe will be analyzed: Munich, Milan, Paris, London and Dublin (**BRON**). 
 
-Read the generated research file by goign to XXXX(nog invullen, linkje naar het document met de resultaten)
-
 ## Method
-Variabelen: 
+```bash
+Variables: 
+- Price
+- Date 
+- Location 
+- Computed variable weekend or weekday
+- City 
+- Roomtype 
+- ID
+- Continent
+```
 Conceptual model: 
 
 ## Analysis results
@@ -48,11 +56,10 @@ To run the file you must have installed to following programs:
 - [Git Bash](https://gitforwindows.org/) (windows user) of terminal (mac user)
 - [pandoc](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/pandoc/) is needed to convert a markdown file to PDF
 
+### R libraries 
 In R the following packages should be installed by copying/ pasting and running the following code snippet:
 - install.packages("tidyverse")
 - install.packages("readr")
-
-### R libraries 
 
 ### Collecting the data
 
