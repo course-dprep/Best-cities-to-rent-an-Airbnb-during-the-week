@@ -8,7 +8,6 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
 # Cleaning InsideAirBnB data
 
 ## This R script is used to clean the previously downloaded data from InsideAirBnB (through download_file) and prepare this data for further analysis of the research question. Among others, variables are altered, columns are added and datesets are merged within this part of the script.
