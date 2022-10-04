@@ -16,11 +16,11 @@ The general question for this study project is as follows:
 
 **“*To what extent does the day of the week (weekend vs. weekday) impact pricing of Airbnb in the U.S.? And does this significantly differ per roomtype, and does this significantly differ between the 5 U.S. cities?*”**
 
-Next to that, it could be interesting to find out if this trend also exists in Europe. Therefore, the following cities in Europe will be analyzed: Munich, Milan, Paris, London and Dublin (**BRON**). 
+There are no sources available for the top 5 Airbnb in Europe, which agree or disagree with the statement from the U.S. For this reason, we thought it would be interesting to find out if this trend (also) exists in Europe. The 5 most popular Airbnb countries in Europe will be analyzed: Munich, Milan, Paris, London and Dublin (**BRON**). In the end, the U.S. and Europe will be compared. 
 
 ## Method
+**Variables:**
 ```bash
-Variables: 
 - Price
 - Date 
 - Location 
@@ -30,7 +30,7 @@ Variables:
 - ID
 - Continent
 ```
-Conceptual model: 
+**Conceptual model:**
 
 ## Analysis results
 
