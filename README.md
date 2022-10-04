@@ -81,5 +81,5 @@ This is the repository for the course [Data Preparation and Workflow Management]
 ### More resources
 
 Onderstaande bronnen moeten nog verwerkt worden, daarnaast ook nog extra bronnen zoeken: 
-- https://www.airdna.co/blog/5-airbnb-guest-trends-to-watch
-- https://www.businesstravelexecutive.com/news/weekday-us-hotel-occupancy-hits-pandemic-era-high 
+- *5 Airbnb Guest Trends to Watch in 2022.* (n.d.). Retrieved October 4, 2022, from https://www.airdna.co/blog/5-airbnb-guest-trends-to-watch
+- *Weekday US Hotel Occupancy Hits Pandemic-Era High.* (2022, June 20). Retrieved October 4, 2022, from https://www.businesstravelexecutive.com/news/weekday-us-hotel-occupancy-hits-pandemic-era-high
