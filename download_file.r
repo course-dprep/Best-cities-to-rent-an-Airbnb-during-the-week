@@ -15,7 +15,7 @@ calender_data <- lapply(urls_calender, function(url) {
 })
 
 calender_data <- calender_data %>% bind_rows()
-
+write.csv(calender_data, "calender_data.csv")
 
 for (url in urls_listing) {
   filename = paste(gsub('[^a-zA-Z]', '', url), '.csv')
@@ -30,3 +30,4 @@ listing_data <- lapply(urls_listing, function(url) {
 })
 
 listing_data <- listing_data %>% bind_rows()
+write.csv(listing_data, "listing_data.csv")
