@@ -3,28 +3,29 @@ title: "download_file.Rmd"
 author: "Bo"
 date: "2022-10-03"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
+  word_document: default
 ---
+# Download InsideAirBnB data
+## This R script is used to download datasets from InsideAirBnB.com, which will later be used, after further cleaning and preparing, for analysis of AirBnB pricing in relation to weekends and weekdays.
 
-This R script is used to download datasets from InsideAirBnB.com, which will later be used, after further cleaning and preparing, for analysis of AirBnB pricing in relation to weekends and weekdays. 
+### Step 1) Installing and running the required packages:
 
-Step 1)
-Installing and running the required packages:
 ```{r packages}
 library(tidyverse)
-library(readr)
 ```
 
-Step 2)
-Creating lists of the urls that need to be downloaded: 
-(2 lists need to be created, one for the listings and one for the calender data)
+### Step 2) Creating lists of the urls that need to be downloaded: (2 lists need to be created, one for the listings and one for the calender data)
+
 ```{list of urls}
 urls_calender = c("http://data.insideairbnb.com/united-states/co/denver/2022-09-26/data/calendar.csv.gz", "http://data.insideairbnb.com/ireland/leinster/dublin/2022-09-11/data/calendar.csv.gz", "http://data.insideairbnb.com/united-kingdom/england/london/2022-09-10/data/calendar.csv.gz", "http://data.insideairbnb.com/united-states/ca/los-angeles/2022-09-09/data/calendar.csv.gz", "http://data.insideairbnb.com/italy/lombardy/milan/2022-09-14/data/calendar.csv.gz", "http://data.insideairbnb.com/germany/bv/munich/2022-06-21/data/calendar.csv.gz", "http://data.insideairbnb.com/united-states/ny/new-york-city/2022-09-07/data/calendar.csv.gz", "http://data.insideairbnb.com/france/ile-de-france/paris/2022-06-06/data/calendar.csv.gz", "http://data.insideairbnb.com/united-states/or/portland/2022-09-16/data/calendar.csv.gz", "http://data.insideairbnb.com/united-states/ca/san-francisco/2022-09-07/data/calendar.csv.gz")
 urls_listing = c("http://data.insideairbnb.com/united-states/co/denver/2022-09-26/data/listings.csv.gz", "http://data.insideairbnb.com/ireland/leinster/dublin/2022-09-11/data/listings.csv.gz", "http://data.insideairbnb.com/united-kingdom/england/london/2022-09-10/data/listings.csv.gz", "http://data.insideairbnb.com/united-states/ca/los-angeles/2022-09-09/data/listings.csv.gz", "http://data.insideairbnb.com/italy/lombardy/milan/2022-09-14/data/listings.csv.gz", "http://data.insideairbnb.com/germany/bv/munich/2022-06-21/data/listings.csv.gz", "http://data.insideairbnb.com/united-states/ny/new-york-city/2022-09-07/data/listings.csv.gz", "http://data.insideairbnb.com/france/ile-de-france/paris/2022-06-06/data/listings.csv.gz", "http://data.insideairbnb.com/united-states/or/portland/2022-09-16/data/listings.csv.gz", "http://data.insideairbnb.com/united-states/ca/san-francisco/2022-09-07/data/listings.csv.gz")
 ```
 
-Step 3) Create a for loop that iterates over the urls_calender list and, 1) downloads the files located in the urls and 2) renames these files such that the files ar easiliy recognizable:
+### Step 3) Create a for loop that iterates over the urls_calender list and, 1) downloads the files located in the urls and 2) renames these files such that the files ar easiliy recognizable:
+
 ```{for loop through all urls in urls_calender}
 for (url in urls_calender) {
   filename = paste(gsub('[^a-zA-Z]', '', url), '.csv')
@@ -33,7 +34,8 @@ for (url in urls_calender) {
 }
 ```
 
-Step 4) Create a for loop that iterates over the urls_listing list and, 1) downloads the files located in the urls and 2) renames these files such that the files are easiliy recognizable:
+### Step 4) Create a for loop that iterates over the urls_listing list and, 1) downloads the files located in the urls and 2) renames these files such that the files are easiliy recognizable:
+
 ```{for loop through all urls in ulrs_listing}
 for (url in urls_listing) {
   filename = paste(gsub('[^a-zA-Z]', '', url), '.csv')
@@ -42,7 +44,8 @@ for (url in urls_listing) {
 }
 ```
 
-Step 5) Create a complete list for urls_calender data, which includes all of the downloaded files. This complete list is called calender_data:
+### Step 5) Create a complete list for urls_calender data, which includes all of the downloaded files. This complete list is called calender_data:
+
 ```{Creating a complete list for urls_calender}
 calender_data <- lapply(urls_calender, function(url) {
   ds = read_csv(url, n_max = 5000)
@@ -52,7 +55,8 @@ calender_data <- lapply(urls_calender, function(url) {
 })
 ```
 
-Step 6) Create a complete list for urls_listing data, which includes all of the downloaded files, but only reads the "id" and "room_type" columns, which are the columns that are required for the analysis. This complete list is called listing_data. 
+### Step 6) Create a complete list for urls_listing data, which includes all of the downloaded files, but only reads the "id" and "room_type" columns, which are the columns that are required for the analysis. This complete list is called listing_data.
+
 ```{Creating a complete list for urls_listing, with "id" and "room_type" columns}
 listing_data <- lapply(urls_listing, function(url) {
   ds = read_csv(url, col_select = c("id","room_type"), n_max = 5000)
@@ -60,48 +64,11 @@ listing_data <- lapply(urls_listing, function(url) {
 })
 ```
 
-Step 7) Bind all of the rows for both complete lists, which is possible because all of the lists contain the same columns:
+### Step 7) Bind all of the rows for both complete lists, which is possible because all of the lists contain the same columns:
+
 ```{Binding rows}
 calender_data <- calender_data %>% bind_rows()
 listing_data <- listing_data %>% bind_rows()
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## The final datasets should now be downloaded and read into R, ready for further preparation!
