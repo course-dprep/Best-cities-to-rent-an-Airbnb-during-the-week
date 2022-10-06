@@ -4,6 +4,7 @@
 ![_109556954_airbnb (2)](https://user-images.githubusercontent.com/111437432/191220772-d6aa7645-2e0f-40c6-8fe0-ed349eafe2a6.png)
 
 ## Introduction
+
 Welcome to the 'could shortterm Airbnb weekdays stay become as expensive as weekends?' repository. 
 This README provides detailed instructions on how to use the contents in this repository for future use.
 
@@ -32,9 +33,11 @@ There are no sources available for the top 5 Airbnb in Europe, which agree or di
 ```
 **Conceptual model:**
 
+<img width="554" alt="image" src="https://user-images.githubusercontent.com/112823109/194273826-e5bffbfb-a382-4d71-9ca3-68b32ccf30d7.png">
+
 ## Analysis results
 
-## Repository overview --> AANPASSEN!!!!!
+## Repository overview
 ```bash
 ├── README.md
 ├── data
@@ -78,7 +81,7 @@ This is the repository for the course [Data Preparation and Workflow Management]
 - Anouk Lamers, a.j.f.lamers@tilburguniversity.edu
 - Caroline Bloemendaal, c.a.bloemendaal@tilburguniversity.edu
 
-### More resources
+### Resources
 
 Onderstaande bronnen moeten nog verwerkt worden, daarnaast ook nog extra bronnen zoeken: 
 - *5 Airbnb Guest Trends to Watch in 2022.* (n.d.). Retrieved October 4, 2022, from https://www.airdna.co/blog/5-airbnb-guest-trends-to-watch
