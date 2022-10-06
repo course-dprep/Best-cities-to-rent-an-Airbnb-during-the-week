@@ -1,10 +1,9 @@
+library(tidyverse)
+
 merged_data <- calender_data %>%
   left_join(listing_data, by = c("listing_id" = "id"))
 
 merged_data_without_na <- na.omit(merged_data)
-
-
-
 
 merged_data_without_na$day_num <- format(merged_data_without_na$date,"%u")
 merged_data_without_na$day_num <- as.numeric(merged_data_without_na$day_num)
