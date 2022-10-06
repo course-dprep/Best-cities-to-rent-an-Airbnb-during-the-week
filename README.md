@@ -1,36 +1,33 @@
 
 # Could shortterm Airbnb weekday stays become as expensive as weekends? 
 
-
-<img width="682" alt="airbnb-678x381-1" src="https://user-images.githubusercontent.com/112823109/194288161-061a6d3b-6757-49e3-bb3b-aea886bb745e.png">
+<img width="650" alt="airbnb-678x381-1" src="https://user-images.githubusercontent.com/112823109/194288390-1e801324-f0dd-401a-a092-91ef73fe8cdb.png">
 
 ## Motivation
 Shortterm weekday stays are becoming increasingly popular in the U.S (Chipkin, 2022). Demand for Tuesday night stays grew 5% from 2019 to 2021; Wednesdays came in a close second, followed by Mondays and Thursdays. In the past Airbnb hosts were quickly inclined to lower their prices for renting the Airbnb during the week, while instead, they maybe could increase prices. Currently, Airdna (2022) claims that it is an ideal time to optimize the pricing strategy for Airbnb hosts. Especially, weekday stays.
 
-In this research, prices from 
-
-From the top 25 most popular Airbnb cities in the U.S.(Airdna, 2019), the following cities will be analyzed: Portland, San Francisco, Denver, Los Angeles, New York. These cities are spread all over the U.S, and by gathering and analyzing data of these 5 cities, a good representation of the whole U.S. is given. There is a possibility that the roomtype (entire place, private room, hotel room or a shared room) has an impact on trend. It could appear that the pricthe trend can be confirmed in the U.S. If not, hosts can change their prices based on this research. 
+In this research, prices from week days and weekends will be compared. From the top 25 most popular Airbnb cities in the U.S.(Airdna, 2019), the following cities will be analyzed: Portland, San Francisco, Denver, Los Angeles, New York. These cities are spread all over the U.S, and by gathering and analyzing data of these 5 cities, a good representation of the whole U.S. is given. There is a possibility that the roomtype (entire place, private room, hotel room or a shared room) has an impact on trend. It could appear that the pricthe trend can be confirmed in the U.S. If not, hosts can change their prices based on this research. 
 The general question for this study project is as follows: 
 
 **“*To what extent does the day of the week (weekend vs. weekday) impact pricing of Airbnb in the U.S.? And does this significantly differ per roomtype, and does this significantly differ between the 5 U.S. cities?*”**
 
-There are no sources available for the top 5 Airbnb in Europe, which agree or disagree with the statement from the U.S. For this reason, we thought it would be interesting to find out if this trend (also) exists in Europe. The 5 most popular Airbnb countries in Europe will be analyzed: Munich, Milan, Paris, London and Dublin (**BRON**). In the end, the U.S. and Europe will be compared. 
+In Europe, there are no sources found that confirm nor deny that the popularity of weekday stays has an impact on the pricing of Airbnb's. For that reason, the top 5 Airbnb cities in Europe, will also be analyzed: Munich, Milan, Paris, London and Dublin (**BRON**). In the end, the U.S. and Europe will be compared to see the differences between both Europe and U.S..
 
 ## Method
 **Variables:**
 ```bash
-- Price
-- Date 
-- Location 
-- Computed variable weekend or weekday
-- City 
-- Roomtype 
-- ID
-- Continent
+1. Price
+2. Date 
+3. Location 
+4. Computed variable weekend or weekday
+5. City 
+6. Roomtype 
+7. ID
+8. Continent
 ```
 **Conceptual model:**
 
-<img width="554" alt="image" src="https://user-images.githubusercontent.com/112823109/194273826-e5bffbfb-a382-4d71-9ca3-68b32ccf30d7.png">
+<img width="740" alt="image" src="https://user-images.githubusercontent.com/112823109/194291074-3a79143b-6ec1-40c2-9c9e-ff7a742f4441.png">
 
 ## Analysis results
 
