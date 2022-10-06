@@ -2,8 +2,7 @@
 # Could shortterm Airbnb weekday stays become as expensive as weekends? 
 
 
-
-<img width="733" alt="airbnb-678x381-1" src="https://user-images.githubusercontent.com/112823109/194286898-663f3e76-a18d-4473-ba0f-0c84e7158cc7.png">
+<img width="682" alt="airbnb-678x381-1" src="https://user-images.githubusercontent.com/112823109/194288161-061a6d3b-6757-49e3-bb3b-aea886bb745e.png">
 
 ## Motivation
 Shortterm weekday stays are becoming increasingly popular in the U.S (Chipkin, 2022). Demand for Tuesday night stays grew 5% from 2019 to 2021; Wednesdays came in a close second, followed by Mondays and Thursdays. In the past Airbnb hosts were quickly inclined to lower their prices for renting the Airbnb during the week, while instead, they maybe could increase prices. Currently, Airdna (2022) claims that it is an ideal time to optimize the pricing strategy for Airbnb hosts. Especially, weekday stays.
