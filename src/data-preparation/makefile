@@ -1,4 +1,4 @@
-all: ../../data/datafiles.txt
+all: ../../data/datafiles.txt ../../data/calender_data.csv ../../data/listing_data.csv
 
 
 ../../data/datafiles.txt: download_file.r
