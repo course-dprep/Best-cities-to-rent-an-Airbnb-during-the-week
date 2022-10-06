@@ -1,5 +1,8 @@
 library(tidyverse)
 
+calender_data <- read.csv(calender_data.csv)
+listing_data <- read.csv(listing_data.csv)
+
 merged_data <- calender_data %>%
   left_join(listing_data, by = c("listing_id" = "id"))
 
