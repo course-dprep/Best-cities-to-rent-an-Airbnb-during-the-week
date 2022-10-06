@@ -15,3 +15,5 @@ merged_data_without_na$wDay <- factor(((merged_data_without_na$day_num) %in% wee
 
 # We still need to change the price variable into a variable that stores the numeric value of price without the dollar sign
 merged_data_without_na$price <- parse_number(merged_data_without_na$price)
+
+write.csv(merged_data_without_na, "cleaned_dataset.csv")
