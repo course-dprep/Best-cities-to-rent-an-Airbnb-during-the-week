@@ -1,8 +1,8 @@
-all: ../../data/datafiles.txt ../../data/calender_data.csv ../../data/listing_data.csv
+all: ../../data/calender_data.csv ../../data/listing_data.csv
 
 
 ../../data/datafiles.txt: download_file.r
 	R --vanilla < download_file.r
 
-../../data/calender_data.csv ../../data/listing_data.csv: compiling_file.r 
+../../data/calender_data.csv ../../data/listing_data.csv: compiling_file.r ../../data/datafiles.txt 
 	R --vanilla < compiling_file.r
