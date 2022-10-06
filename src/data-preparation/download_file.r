@@ -16,7 +16,7 @@ urls_listing = c("http://data.insideairbnb.com/united-states/co/denver/2022-09-2
 for (url in urls_calender) {
   filename = paste(gsub('[^a-zA-Z]', '', url), '.csv')
   filename = gsub('httpdatainsideairbnbcom', '', filename)
-  download.file(url, destfile = filename) # download file
+  download.file(url, destfile = paste0('../../', filename)) # download file
 }
 
 calender_data <- lapply(urls_calender, function(url) {
@@ -32,7 +32,7 @@ write.csv(calender_data, "calender_data.csv")
 for (url in urls_listing) {
   filename = paste(gsub('[^a-zA-Z]', '', url), '.csv')
   filename = gsub('httpdatainsideairbnbcom', '', filename) 
-  download.file(url, destfile = filename) # download file
+  download.file(url, destfile = paste0('../../', filename)) # download file
 }
 
 
