@@ -1,3 +1,4 @@
+library(tidyverse)
 urls_calender = c("http://data.insideairbnb.com/united-states/co/denver/2022-09-26/data/calendar.csv.gz",
                   "http://data.insideairbnb.com/ireland/leinster/dublin/2022-09-11/data/calendar.csv.gz", 
                   "http://data.insideairbnb.com/united-kingdom/england/london/2022-09-10/data/calendar.csv.gz", 
