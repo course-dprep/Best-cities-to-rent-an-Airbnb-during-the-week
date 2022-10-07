@@ -23,11 +23,6 @@ urls_listing = c("http://data.insideairbnb.com/united-states/co/denver/2022-09-2
                  "http://data.insideairbnb.com/united-states/or/portland/2022-09-16/data/listings.csv.gz", 
                  "http://data.insideairbnb.com/united-states/ca/san-francisco/2022-09-07/data/listings.csv.gz")
 
-urls_calender = c("http://data.insideairbnb.com/united-states/co/denver/2022-09-26/data/calendar.csv.gz",
-                 "http://data.insideairbnb.com/ireland/leinster/dublin/2022-09-11/data/calendar.csv.gz")
-urls_listing = c("http://data.insideairbnb.com/united-states/co/denver/2022-09-26/data/listings.csv.gz",
-                  "http://data.insideairbnb.com/ireland/leinster/dublin/2022-09-11/data/listings.csv.gz")
-
 # Transformation and output
 
 for (url in urls_calender) {
