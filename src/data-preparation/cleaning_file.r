@@ -8,9 +8,14 @@ merged_data <- calender_data %>%
 
 merged_data_without_na <- na.omit(merged_data)
 
+merged_data_without_na$date <- as.Date(merged_data_without_na$date)
+
 merged_data_without_na$day_num <- format(merged_data_without_na$date,"%u")
 merged_data_without_na$day_num <- as.numeric(merged_data_without_na$day_num)
 
+merged_data_without_na$weekdag <- weekdays(merged_data_without_na$date)
+
+  
 weekdays1 <- c(1, 2, 3, 4, 7)
 merged_data_without_na$wDay <- factor(((merged_data_without_na$day_num) %in% weekdays1), levels=c(FALSE, TRUE), labels=c('weekend', 'weekday'))
 
