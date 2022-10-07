@@ -7,5 +7,5 @@ all: ../../src/cleaned_data.csv
 ../../data/calender_data.csv ../../data/listing_data.csv: compiling_file.r ../../data/datafiles.txt 
 	R --vanilla < compiling_file.r
 	
-../../src/cleaned_data.csv: cleaning_file.r ../../data/calender_data.csv ../../data/listing_data.csv
+../../src/cleaned_dataset.csv: cleaning_file.r ../../data/calender_data.csv ../../data/listing_data.csv
 	R --vanilla < cleaning_file.r
