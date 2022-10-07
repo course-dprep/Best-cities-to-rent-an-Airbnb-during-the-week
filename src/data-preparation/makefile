@@ -1,4 +1,4 @@
-all: ../../src/cleaned_data.csv
+all: ../../src/cleaned_dataset.csv
 
 
 ../../data/datafiles.txt: download_file.r
