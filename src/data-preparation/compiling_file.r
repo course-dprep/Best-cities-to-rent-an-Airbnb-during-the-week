@@ -27,6 +27,15 @@ calender_data <- lapply(urls_calender, function(url) {
   ds
 })
 
+# Try random sample:
+# calender_data <- lapply(urls_calender, function(url) {
+#ds = sampleCSV(url, 5000)
+#city_name = strsplit(url, '/')[[1]][6]
+#ds = ds %>% mutate(city = city_name)
+#ds
+#})
+
+
 calender_data <- calender_data %>% bind_rows()
 write.csv(calender_data, "calender_data.csv")
 
