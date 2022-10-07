@@ -38,6 +38,6 @@ listing_data <- lapply(urls_listing, function(url) {
 listing_data <- listing_data %>% bind_rows()
 write.csv(listing_data, "listing_data.csv")
 
-sink('../../data/datafiles.txt')
+sink('../../data/datafiles1.txt')
 cat('done!')
 sink()
