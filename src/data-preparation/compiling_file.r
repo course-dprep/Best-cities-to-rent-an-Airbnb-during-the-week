@@ -37,13 +37,13 @@ calender_data <- lapply(urls_calender, function(url) {
 
 
 calender_data1 <- calender_data[1:3] %>% bind_rows()
-sample_calender_data <- sample_n(calender_data1, nrow(calender_data1)/12)
+sample_calender_data <- sample_n(calender_data1, nrow(calender_data1)/15)
 rm(calender_data1)
 calender_data2<- calender_data[4:7] %>% bind_rows()
-sample_calender_data2 <- sample_n(calender_data2, nrow(calender_data2)/12)
+sample_calender_data2 <- sample_n(calender_data2, nrow(calender_data2)/15)
 rm(calender_data2)
 calender_data3 <- calender_data[8:10] %>% bind_rows()
-sample_calender_data3 <- sample_n(calender_data3, nrow(calender_data3)/12)
+sample_calender_data3 <- sample_n(calender_data3, nrow(calender_data3)/15)
 rm(calender_data3)
 rm(calender_data)
 
