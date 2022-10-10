@@ -21,7 +21,7 @@ urls_listing = c("http://data.insideairbnb.com/united-states/co/denver/2022-09-2
                  "http://data.insideairbnb.com/united-states/ca/san-francisco/2022-09-07/data/listings.csv.gz")
 
 calender_data <- lapply(urls_calender, function(url) {
-  ds = read_csv(url, n_max = 5000)
+  ds = read_csv(url, n_max = Inf)
   city_name = strsplit(url, '/')[[1]][6]
   ds = ds %>% mutate(city = city_name)
   ds
@@ -36,11 +36,23 @@ calender_data <- lapply(urls_calender, function(url) {
 #})
 
 
-calender_data <- calender_data %>% bind_rows()
+calender_data1 <- calender_data[1:3] %>% bind_rows()
+sample_calender_data <- sample_n(calender_data1, nrow(calender_data1)/12)
+rm(calender_data1)
+calender_data2<- calender_data[4:7] %>% bind_rows()
+sample_calender_data2 <- sample_n(calender_data2, nrow(calender_data2)/12)
+rm(calender_data2)
+calender_data3 <- calender_data[8:10] %>% bind_rows()
+sample_calender_data3 <- sample_n(calender_data3, nrow(calender_data3)/12)
+rm(calender_data3)
+rm(calender_data)
+
+calender_data <- bind_rows(sample_calender_data, sample_calender_data2, sample_calender_data3)
 write.csv(calender_data, "calender_data.csv")
+rm(sample_calender_data, sample_calender_data2, sample_calender_data3)
 
 listing_data <- lapply(urls_listing, function(url) {
-  ds = read_csv(url, col_select = c("id","room_type"), n_max = 5000)
+  ds = read_csv(url, col_select = c("id","room_type"), n_max = Inf)
   ds
 })
 
