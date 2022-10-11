@@ -80,3 +80,4 @@ This is the repository for the course [Data Preparation and Workflow Management]
 Onderstaande bronnen moeten nog verwerkt worden, daarnaast ook nog extra bronnen zoeken: 
 - *5 Airbnb Guest Trends to Watch in 2022.* (n.d.). Retrieved October 4, 2022, from https://www.airdna.co/blog/5-airbnb-guest-trends-to-watch
 - *Weekday US Hotel Occupancy Hits Pandemic-Era High.* (2022, June 20). Retrieved October 4, 2022, from https://www.businesstravelexecutive.com/news/weekday-us-hotel-occupancy-hits-pandemic-era-high
+- *Airbnb: These are Europe’s most profitable cities.* (n.d.). TravelDailyNews International. Retrieved October 11, 2022, from https://www.traveldailynews.com/post/airbnb-these-are-europes-most-profitable-cities
