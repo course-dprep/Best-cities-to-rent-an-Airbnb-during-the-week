@@ -6,28 +6,26 @@
 ## Motivation
 Shortterm weekday stays are becoming increasingly popular in the U.S (Chipkin, 2022). Demand for Tuesday night stays grew 5% from 2019 to 2021; Wednesdays came in a close second, followed by Mondays and Thursdays. In the past Airbnb hosts were quickly inclined to lower their prices for renting the Airbnb during the week, while instead, they maybe could increase prices. Currently, Airdna (2022) claims that it is an ideal time to optimize the pricing strategy for Airbnb hosts. Especially, weekday stays.
 
-In this research, prices from week days and weekends will be compared. From the top 25 most popular Airbnb cities in the U.S.(Airdna, 2019), the following cities will be analyzed: Portland, San Francisco, Denver, Los Angeles, New York. These cities are spread all over the U.S, and by gathering and analyzing data of these 5 cities, a good representation of the whole U.S. is given. There is a possibility that the roomtype (entire place, private room, hotel room or a shared room) has an impact on trend. It could appear that the pricthe trend can be confirmed in the U.S. If not, hosts can change their prices based on this research. 
+In this research, prices from week days and weekends will be compared. From the top 25 most popular Airbnb cities in the U.S.(Airdna, 2019), the following cities will be analyzed: Portland, San Francisco, Denver, Los Angeles, New York. These cities are spread all over the U.S, and by gathering and analyzing data of these 5 cities, a good representation of the whole U.S. is given. There is a possibility that the roomtype (private room, entire home/apartment, shared room or hotel room) has an impact on trend. It could appear that the pricthe trend can be confirmed in the U.S. If not, hosts can change their prices based on this research. 
 The general question for this study project is as follows: 
 
-**“*To what extent does the day of the week (weekend vs. weekday) impact pricing of Airbnb in the U.S.? And does this significantly differ per roomtype, and does this significantly differ between the 5 U.S. cities?*”**
+**“*To what extent does the day of the week (weekday vs. weekend) impact pricing of Airbnb in the U.S.? And does this significantly differ per roomtype, and does this significantly differ between the 5 U.S. cities?*”**
 
-In Europe, there are no sources found that confirm nor deny that the popularity of weekday stays has an impact on the pricing of Airbnb's. For that reason, the top 5 Airbnb cities in Europe, will also be analyzed: Munich, Milan, Paris, London and Dublin (**BRON**). In the end, the U.S. and Europe will be compared to see the differences between both Europe and U.S..
+In Europe, there are no sources found that confirm nor deny that the popularity of weekday stays has an impact on the pricing of Airbnb's. For that reason, the top 5 Airbnb cities in Europe, will also be analyzed: Munich, Milan, Paris, London and Dublin (Airbnb: These Are Europe’s Most Profitable Cities, n.d.). In the end, the U.S. and Europe will be compared to see the differences between both Europe and U.S..
 
 ## Method
 **Variables:**
 ```bash
-1. Price
-2. Date 
-3. Location 
-4. Computed variable weekend or weekday
-5. City 
-6. Roomtype 
-7. ID
-8. Continent
+1. weekdag: Monday, Tuesday, Wednesday, Thursday, Friday, Sturday, Sunday
+2. wDay: computed variable of weekdays (Monday, Tuesday, Wednesday, Thursday, Sunday) vs. weekend (Friday, Saturday)
+2. Room_type: Private room, entire home/ apartment, shared room or hotel
+3. City: Top 5 most popular Airbnb cities in the U.S. and in Europe seperatly
+4. Price: this is the price of the roomtype on a random day during the week or during the weekend
+5. Date: the date is used to check if which price the hosts asks on a certain date
 ```
 **Conceptual model:**
 
-<img width="740" alt="image" src="https://user-images.githubusercontent.com/112823109/194291074-3a79143b-6ec1-40c2-9c9e-ff7a742f4441.png">
+<img width="829" alt="image" src="https://user-images.githubusercontent.com/112823109/195066376-1d29aca3-c02d-40b3-b1cf-db975bfad5db.png">
 
 ## Analysis results
 
@@ -57,6 +55,9 @@ To run the file you must have installed to following programs:
 In R the following packages should be installed by copying/ pasting and running the following code snippet:
 - install.packages("tidyverse")
 - install.packages("readr")
+- install.packages("dplyr")
+- library(stringr)
+- library(tidyr)
 
 ### Collecting the data
 
