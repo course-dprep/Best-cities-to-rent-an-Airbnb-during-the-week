@@ -1,5 +1,5 @@
 all: ../../src/airbnb_analysis
 
 
-../../data/datafiles.txt: download_file.r
-	R --vanilla < download_file.r
+../../data/datafiles.txt: analyze.R
+	R --vanilla < analyze.R
