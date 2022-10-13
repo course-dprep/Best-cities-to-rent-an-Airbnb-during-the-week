@@ -50,13 +50,6 @@ To run the file you must have installed to following programs:
 - [Git Bash](https://gitforwindows.org/) (windows user) of terminal (mac user)
 - [pandoc](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/pandoc/) is needed to convert a markdown file to PDF
 
-### R libraries 
-In R the following packages should be installed by copying/ pasting and running the following code snippet:
-- install.packages("tidyverse")
-- install.packages("readr")
-- install.packages("dplyr")
-- library(stringr)
-- library(tidyr)
 
 ### Collecting the data
 
