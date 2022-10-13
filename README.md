@@ -1,5 +1,4 @@
-
-# Could shortterm Airbnb weekday stays become as expensive as weekends?? 
+# Could shortterm Airbnb weekday stays become as expensive as weekends?
 
 <img width="650" alt="airbnb-678x381-1" src="https://user-images.githubusercontent.com/112823109/194288390-1e801324-f0dd-401a-a092-91ef73fe8cdb.png">
 
