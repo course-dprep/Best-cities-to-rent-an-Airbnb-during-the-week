@@ -59,4 +59,4 @@ The boxplot shows that there are some cases for which the price is €0.00. Ther
 Only 0.02% of the dataset are outliers, which is in perspective very small, and will therefore not have any impact on the results of the dataset.
 
 ## **3. After cleaning**
-The cleaned dataset (cleaned_dataset) contain approximately 6 million observations and 10 variables to work with. The cleaned dataset contains information on 10 different cities.
+The cleaned dataset (cleaned_dataset) contains approximately 6 million observations and 10 variables to work with. The cleaned dataset contains information about 10 different cities.
