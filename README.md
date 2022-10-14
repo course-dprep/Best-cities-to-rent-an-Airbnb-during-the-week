@@ -51,9 +51,11 @@ To answer the researuch question, multiple Airbnb datasets from [Inside Airbnb](
 ```
 
 ## Conclusion
-From the analysis, it can be concluded that.....
+Based on the previous result section, the following conclusions can be drawn for the hypothesized relation. There is no significant effect in the difference of the price between weekend days and weekdays. The average price between weekdays and weekend days does differ for cities in Europe, but this difference is very small. However there are two interaction effects:  between weekdays vs. weekend days and room type on price, and between weekdays vs. weekend days and city on price. 
+ 
+Despite the conclusion of the hypothesis, it is critical to keep in mind that the size of the effect was very tiny in all statistical tests. This means that these results should be interpreted with caution. 
 
-For more detailed information about the findings of the analyses, read:    
+For more detailed information about the findings of the analyses, read: [/gen/analysis/output/README_analysis_conclusion.md](https://github.com/course-dprep/What-happens-to-AirBnB-pricing-on-weekdays-vs-weekends/blob/master/gen/analysis/output/README_analysis_conclusion.md)
 
 ### Authors
 This is the repository for the course [Data Preparation and Workflow Management](https://dprep.hannesdatta.com/) at Tilburg University as part of the Master's program Marketing Analytics, used for the team project of group 2.
