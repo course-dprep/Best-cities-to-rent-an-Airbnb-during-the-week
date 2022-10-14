@@ -1,8 +1,4 @@
----
-output:
-  html_document: default
-  pdf_document: default
----
+
 # **Analysis & interpretation**
 
 ## **Checking the assumptions ANOVA**
