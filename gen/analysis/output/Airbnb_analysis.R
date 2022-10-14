@@ -79,43 +79,33 @@ eta_squared(anova_2, ci=0.95, partial = TRUE)
 
 eta_squared(anova_3, ci=0.95, partial = TRUE) 
 
-# Moderation effect of city and room_type (Note: Loading the moderators will take some time)
+# Moderation effect of city and room_type
 ## city
 mod1 <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$city, data_airbnb_ANOVA$wDay))
 summary(mod1)
 
-mod2 <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$united_states, data_airbnb_ANOVA$wDay))
-summary(mod2)
-
-mod3 <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$europe, data_airbnb_ANOVA$wDay))
-summary(mod3)
-
 ## room_type
-mod4 <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$room_type, data_airbnb_ANOVA$wDay))
-summary(mod4)
+mod2 <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$room_type, data_airbnb_ANOVA$wDay))
+summary(mod2)
 
 # Tukey tests for moderation effect
 TukeyHSD(mod1)
 TukeyHSD(mod2)
-TukeyHSD(mod3)
-TukeyHSD(mod4)
 
 # Effect size of the ANOVAs with moderation effect
 eta_squared(mod1, ci=0.95, partial = TRUE) 
 eta_squared(mod2, ci=0.95, partial = TRUE)
-eta_squared(mod3, ci=0.95, partial = TRUE)
-eta_squared(mod4, ci=0.95, partial = TRUE)
 
-# Average price per day for cities in United States 
+# Difference in average price between weekdays and weekend days in United States 
 data_airbnb_ANOVA %>%
   filter(united_states == 'TRUE') %>%
-  group_by(weekdag) %>%
+  group_by(wDay) %>%
   summarize(mean_price = mean(price))
 
-# Average price per day for cities in Europe
+# Difference in average price between weekdays and weekend days in Europe
 data_airbnb_ANOVA %>%
   filter(europe == 'TRUE') %>%
-  group_by(weekdag) %>%
+  group_by(wDay) %>%
   summarize(mean_price = mean(price))
 
 # Difference between average price in weekend and during the week for cities in United States
