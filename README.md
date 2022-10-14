@@ -33,6 +33,7 @@ To run the file you must have installed to following programs:
 - [Git Bash](https://gitforwindows.org/) (windows user) of terminal (mac user)
 - [pandoc](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/pandoc/) is needed to convert a markdown file to PDF
 
+## How to run the project  
 
 ## Research method
 To answer the researuch question, multiple Airbnb datasets from [Inside Airbnb](http://insideairbnb.com/get-the-data/) are combined to one dataset. The dataset contains data from 10 cites in total, 5 from the U.S. and 5 from Europe. This dataset is cleaned and prepared for anlyses, because lots of unformation was not needed to answer the research question. For more information about this read: [/src/data-preparation/README_data_preparation.md](https://github.com/course-dprep/What-happens-to-AirBnB-pricing-on-weekdays-vs-weekends/blob/master/src/data-preparation/README_data_preparation.md)
