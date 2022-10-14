@@ -2,7 +2,6 @@
 
 ## **1. Data exploration**
 ### **1.1 Explore raw data using summary statistics**
-From the summary statisitcs the following results can be derived:
 
 **Statics observations per continent**  
 The original dataset (raw data) contains 6,338,415 observations divided over two continents: United States and Europe. 
