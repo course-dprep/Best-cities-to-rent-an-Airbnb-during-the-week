@@ -2,7 +2,6 @@
 
 ## **1. Data exploration**
 ### **1.1 Explore raw data using summary statistics**
-From the summary statisitcs the following results can be derived:
 
 **Statics observations per continent**  
 The original dataset (raw data) contains 6,338,415 observations divided over two continents: United States and Europe. 
@@ -18,7 +17,7 @@ The original dataset contains 3,839,056 observations in Europe. The observations
 
 \
 \
-The original dataset contains 2,499,359 observations in the United States. The observations of the United Statesare spread over 5 different cities.  
+The original dataset contains 2,499,359 observations in the United States. The observations of the United States are spread over 5 different cities.  
 <img width="413" alt="image" src="https://user-images.githubusercontent.com/112823109/195712388-2cc15f1b-ad41-4c7b-b3b6-862f8182f596.png">
 
 <img width="362" alt="image" src="https://user-images.githubusercontent.com/112823109/195716651-271eb128-6bf5-4593-bb46-fdeac1b0572d.png">
