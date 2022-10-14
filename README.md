@@ -12,23 +12,6 @@ In Europe, there are no sources found that confirm nor deny that the popularity 
 **“*To what extent does the day of the week (weekday vs. weekend) impact pricing of Airbnb? And does this significantly differ per roomtype, and does this significantly differ between the cities (top 5 cities U.S. vs. top 5 cities Europe)?*”**
 
 
-## Method
-To answer the researuch question, multiple Airbnb datasets from InsideAirbnb are combined to one dataset. The dataset contains data from 10 cites in total, 5 from the U.S. and 5 from Europe. This dataset is cleaned and prepared for anlyses, because lots of unformation was not needed to answer the research question. For more information about this read: [/src/data-preparation/README_data_preparation.md](https://github.com/course-dprep/What-happens-to-AirBnB-pricing-on-weekdays-vs-weekends/blob/master/src/data-preparation/README_data_preparation.md)
-
-**Conceptual model:**
-
-![image](https://user-images.githubusercontent.com/112823109/195831134-55df6bd7-c7eb-4388-b0e6-b1bc8b94fa46.png)
-
-**Variables of conceptual model:**
-```bash
-1. wDay: computed variable of weekdays (Monday, Tuesday, Wednesday, Thursday, Sunday) vs. weekend (Friday, Saturday)
-2. Room_type: Private room, entire home/ apartment, shared room or hotel
-3. City: Top 5 most popular Airbnb cities in the U.S. and in Europe seperatly
-4. Price: this is the price of the roomtype on a random day during the week or during the weekend
-```
-
-## Analysis results
-
 ## Repository overview
 ```bash
 ├── README.md
@@ -42,9 +25,8 @@ To answer the researuch question, multiple Airbnb datasets from InsideAirbnb are
     ├── data-preparation
     └── paper 
 ```
-## How to run the analyses?
 
-### Required software / programs 
+## Required software / programs 
 To run the file you must have installed to following programs:
 - [R and R-studio](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/)
 - [Make](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/)
@@ -52,13 +34,25 @@ To run the file you must have installed to following programs:
 - [pandoc](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/pandoc/) is needed to convert a markdown file to PDF
 
 
-### Collecting the data
+## Research method
+To answer the researuch question, multiple Airbnb datasets from [Inside Airbnb](http://insideairbnb.com/get-the-data/) are combined to one dataset. The dataset contains data from 10 cites in total, 5 from the U.S. and 5 from Europe. This dataset is cleaned and prepared for anlyses, because lots of unformation was not needed to answer the research question. For more information about this read: [/src/data-preparation/README_data_preparation.md](https://github.com/course-dprep/What-happens-to-AirBnB-pricing-on-weekdays-vs-weekends/blob/master/src/data-preparation/README_data_preparation.md)
 
+**Conceptual model:**
 
-### Running the workflow
+![image](https://user-images.githubusercontent.com/112823109/195831134-55df6bd7-c7eb-4388-b0e6-b1bc8b94fa46.png)
 
-### Data sources for this research 
-- Airbnb data use available at [Inside Airbnb](http://insideairbnb.com/get-the-data/)
+**Variables of conceptual model:**
+```bash
+1. wDay: computed variable of weekdays (Monday, Tuesday, Wednesday, Thursday, Sunday) vs. weekend (Friday, Saturday)
+2. Room_type: Private room, entire home/ apartment, shared room or hotel
+3. City: Top 5 most popular Airbnb cities in the U.S. and in Europe seperatly
+4. Price: this is the price of the roomtype on a random day during the week or during the weekend
+```
+
+## Conclusion
+From the analysis, it can be concluded that.....
+
+For more detailed information about the findings of the analyses, read:    
 
 ### Authors
 This is the repository for the course [Data Preparation and Workflow Management](https://dprep.hannesdatta.com/) at Tilburg University as part of the Master's program Marketing Analytics, used for the team project of group 2.
