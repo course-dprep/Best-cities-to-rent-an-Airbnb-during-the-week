@@ -20,7 +20,7 @@ In Europe, there are no sources found that confirm nor deny that the popularity 
 │       └── output
 └── src
     ├── analysis
-    ├── data-preparation
+    └── data-preparation
 ```
 
 ## Required software / programs 
