@@ -11,7 +11,7 @@ library(postHoc)
 library(afex)
 library(effectsize)
 library(emmeans)
-install.packages("carData")
+library(car)
 # Import the cleaned data 
 setwd("~/GitHub/Best-cities-to-rent-an-Airbnb-during-the-week/src/data-preparation")
 cleaned_dataset <- read_csv("cleaned_dataset.csv")
@@ -110,30 +110,11 @@ plot_price <- dt_price[, .(mean_price = mean(price)),
                        by = .(wDay, city)]
 
 
-## WERKT NOG NIET
-ggplot(data = plot_price, aes(x = city, y = mean_price)) +
-  geom_line(aes(color = city, linetype = city)) +
-  geom_point(aes(color = city, linetype = city)) +
-  ggtitle("Change in price per city") +
-  xlab("Cities") +
-  ylab("Price") +
-  ylim(0, 1000)
-dev.off()
-
-
-# Pogingen tot boxplots 
+#BoxPlots 
 data_airbnb_ANOVA_uscities <- data_airbnb_ANOVA %>% filter(united_states == TRUE)
 
 ggplot(data_airbnb_ANOVA_uscities, aes(x = day_num, y = price, color = city)) + geom_point()
 
 ggplot(data_airbnb_ANOVA_uscities, aes(x = wDay, y = mean(price))) + geom_col() + facet_wrap(~ city)
 
-
-
-ggplot(data_airbnb_ANOVA, aes(x = city, y = price))+ geom_bar()
-
-ggplot(data_airbnb_ANOVA, 
-       aes(city)) + 
-  geom_bar(aes(y = price 
-               (..count..)/sum(..count..)*100)) + 
-  ylab("percentage")
+ggplot(data_airbnb_ANOVA, aes(x = city))+ geom_bar()

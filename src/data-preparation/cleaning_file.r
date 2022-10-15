@@ -23,16 +23,6 @@ cleaned_dataset$wDay <- factor(((cleaned_dataset$day_num) %in% weekdays1), level
 # We still need to change the price variable into a variable that stores the numeric value of price without the dollar sign
 cleaned_dataset$price <- parse_number(cleaned_dataset$price)
 
-# Create dataset for analyses 
-## Delete columns that are not needed for analyses
-cleaned_dataset <- cleaned_dataset %>% select(-adjusted_price)
-cleaned_dataset <- cleaned_dataset %>% select(-maximum_nights)
-cleaned_dataset <- cleaned_dataset %>% select(-X.y)
-cleaned_dataset <- cleaned_dataset %>% select(-listing_id)
-cleaned_dataset <- cleaned_dataset %>% select(-available)
-cleaned_dataset <- cleaned_dataset %>% select(-X.x)
-cleaned_dataset <- cleaned_dataset %>% select(-date)
-
 ## Make dummy variable of variable wDay 
 cleaned_dataset$wDay <- ifelse(cleaned_dataset$wDay == "weekday", 1,0)
 
@@ -46,6 +36,10 @@ cleaned_dataset$united_states <- factor(cleaned_dataset$city %in% united_states)
 
 europe <- c('munich', 'london', 'paris', 'milan', 'dublin')
 cleaned_dataset$europe <-factor(cleaned_dataset$city %in% europe)
+
+# Delete columns that are not needed for analyses
+cleaned_dataset <- cleaned_dataset %>%
+  dplyr::select(5,7,9,11,12,13,14,15,16,17)
 
 write.csv(cleaned_dataset, "cleaned_dataset.csv")
 
