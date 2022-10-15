@@ -15,7 +15,6 @@ In Europe, there are no sources found that confirm nor deny that the popularity 
 ## Repository overview
 ```bash
 ├── README.md
-├── data
 ├── gen
 │   ├── analysis
 │   ├── data-preparation
