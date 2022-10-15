@@ -16,13 +16,11 @@ In Europe, there are no sources found that confirm nor deny that the popularity 
 ```bash
 ├── README.md
 ├── gen
-│   ├── analysis
-│   ├── data-preparation
-│   └── paper
+│   └── analysis
+│       └── output
 └── src
     ├── analysis
     ├── data-preparation
-    └── paper 
 ```
 
 ## Required software / programs 
