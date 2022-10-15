@@ -5,3 +5,5 @@
 **gen/
 **.Rout
 *.csv
+**pdf
+.Rproj.user
