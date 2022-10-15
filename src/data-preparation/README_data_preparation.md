@@ -46,7 +46,7 @@ As this research focuses on the main question *"To what extent does the day of t
 ### **2.3 Chang the variable "price" to numeric** 
 The data exploration revealed that the variable "price" in this data is imported as a character. For further analysis, the variable "price" must be converted to a numeric value. Before this could be done, the dollar sign and comma for prices greater than a thousand had to be removed.
 
-### **2.4 Chang the variable "price" to numeric** 
+### **2.4 Detect outliers in the data** 
 From the statistics (boxplots and ggplots) used to detect outliers, it was observed that there are a few cases in which outliers seem to exist.
 
 
