@@ -9,15 +9,19 @@ library(afex)
 library(lmerTest)
 library(postHoc)
 library(afex)
+library(car)
 library(effectsize)
 library(emmeans)
-library(car)
+
 # Import the cleaned data 
 setwd("~/GitHub/Best-cities-to-rent-an-Airbnb-during-the-week/src/data-preparation")
 cleaned_dataset <- read_csv("cleaned_dataset.csv")
 View(cleaned_dataset)
 
+
 data_airbnb_ANOVA <- sample_n(cleaned_dataset, 5000)
+View(data_airbnb_ANOVA)
+
 # Homoskedasticity
 ## city
 leveneTest(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$city, data_airbnb_ANOVA$wDay), center=mean) 
@@ -49,43 +53,33 @@ eta_squared(anova_2, ci=0.95, partial = TRUE)
 
 eta_squared(anova_3, ci=0.95, partial = TRUE) 
 
-# Moderation effect of city and room_type (Note: Loading the moderators will take some time)
+# Moderation effect of city and room_type
 ## city
 mod1 <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$city, data_airbnb_ANOVA$wDay))
 summary(mod1)
 
-mod2 <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$united_states, data_airbnb_ANOVA$wDay))
-summary(mod2)
-
-mod3 <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$europe, data_airbnb_ANOVA$wDay))
-summary(mod3)
-
 ## room_type
-mod4 <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$room_type, data_airbnb_ANOVA$wDay))
-summary(mod4)
+mod2 <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$room_type, data_airbnb_ANOVA$wDay))
+summary(mod2)
 
 # Tukey tests for moderation effect
 TukeyHSD(mod1)
 TukeyHSD(mod2)
-TukeyHSD(mod3)
-TukeyHSD(mod4)
 
 # Effect size of the ANOVAs with moderation effect
 eta_squared(mod1, ci=0.95, partial = TRUE) 
 eta_squared(mod2, ci=0.95, partial = TRUE)
-eta_squared(mod3, ci=0.95, partial = TRUE)
-eta_squared(mod4, ci=0.95, partial = TRUE)
 
-# Average price per day for cities in United States 
+# Difference in average price between weekdays and weekend days in United States 
 data_airbnb_ANOVA %>%
   filter(united_states == 'TRUE') %>%
-  group_by(weekdag) %>%
+  group_by(wDay) %>%
   summarize(mean_price = mean(price))
 
-# Average price per day for cities in Europe
+# Difference in average price between weekdays and weekend days in Europe
 data_airbnb_ANOVA %>%
   filter(europe == 'TRUE') %>%
-  group_by(weekdag) %>%
+  group_by(wDay) %>%
   summarize(mean_price = mean(price))
 
 # Difference between average price in weekend and during the week for cities in United States
@@ -109,12 +103,21 @@ dt_price <- as.data.table(data_airbnb_ANOVA)
 plot_price <- dt_price[, .(mean_price = mean(price)), 
                        by = .(wDay, city)]
 
+data_airbnb_ANOVA_uscities <- cleaned_dataset %>% filter(united_states == TRUE)
+data_airbnb_ANOVA_uscities$wDay <- as.numeric(data_airbnb_ANOVA_uscities$wDay)
+dt_price_uscities <- as.data.table(data_airbnb_ANOVA_uscities)
+plot_price_uscities <- dt_price_uscities[, .(mean_price = mean(price)), 
+                                         by = .(wDay, city)]
 
-#BoxPlots 
-data_airbnb_ANOVA_uscities <- data_airbnb_ANOVA %>% filter(united_states == TRUE)
+data_airbnb_ANOVA_eucities <- cleaned_dataset %>% filter(united_states == FALSE)
+data_airbnb_ANOVA_eucities$wDay <- as.numeric(data_airbnb_ANOVA_eucities$wDay)
+dt_price_eucities <- as.data.table(data_airbnb_ANOVA_eucities)
+plot_price_eucities <- dt_price_eucities[, .(mean_price = mean(price)), 
+                                         by = .(wDay, city)]
 
-ggplot(data_airbnb_ANOVA_uscities, aes(x = day_num, y = price, color = city)) + geom_point()
+#Barplot United States 
 
-ggplot(data_airbnb_ANOVA_uscities, aes(x = wDay, y = mean(price))) + geom_col() + facet_wrap(~ city)
+ggplot(plot_price_uscities, aes(x = wDay, y =mean_price)) + geom_bar(stat = "identity") + facet_wrap(~ city)
 
-ggplot(data_airbnb_ANOVA, aes(x = city))+ geom_bar()
+#Barplot Europe
+ggplot(plot_price_eucities, aes(x = wDay, y =mean_price)) + geom_bar(stat = "identity") + facet_wrap(~ city)
