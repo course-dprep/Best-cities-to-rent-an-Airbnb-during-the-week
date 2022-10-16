@@ -1,5 +1,5 @@
-all: ../../src/airbnb_analysis
+all: ../../gen/airbnb_analysis.pdf
 
 
-../../data/datafiles.txt: analyze.R
-	R --vanilla < analyze.R
+../../gen/airbnb_analysis.pdf: analyze.rmd
+	R --vanilla < analyze.rmd
