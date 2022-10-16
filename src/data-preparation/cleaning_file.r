@@ -43,4 +43,5 @@ cleaned_dataset <- cleaned_dataset %>%
 
 write.csv(cleaned_dataset, "cleaned_dataset.csv")
 
+file.copy(from="cleaned_dataset.csv", to='../../src/analysis')
 # File copy needs to be copied towards the gen/analysis/input

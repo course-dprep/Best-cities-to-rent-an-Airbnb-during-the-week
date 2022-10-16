@@ -8,21 +8,17 @@ library(ggplot2)
 library(afex)
 library(lmerTest)
 library(postHoc)
-library(afex)
 library(car)
 library(effectsize)
 library(emmeans)
 
 # Import the cleaned data 
-setwd("~/GitHub/Best-cities-to-rent-an-Airbnb-during-the-week/src/data-preparation")
+#setwd("../src/data-preparation")
 cleaned_dataset <- read_csv("cleaned_dataset.csv")
-View(cleaned_dataset)
-
 
 data_airbnb_ANOVA <- sample_n(cleaned_dataset, 5000)
-View(data_airbnb_ANOVA)
 
-# Homoskedasticity
+# Homoscedasticity
 ## city
 leveneTest(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$city, data_airbnb_ANOVA$wDay), center=mean) 
 leveneTest(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$united_states, data_airbnb_ANOVA$wDay), center=mean) 
@@ -55,37 +51,45 @@ summary(anova_city)
 # Save anova_city
 write.csv(anova_city, file = "../../gen/analysis/output/anova_city_output.csv", fileEncoding = "UTF-8", row.names=FALSE)
 
-## room_type
+## room_type moderator
 mod_room_type_wDay <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$room_type, data_airbnb_ANOVA$wDay))
-summary(mod_room_type_wDay)
+mod_room_type_wDay_summary <- summary(mod_room_type_wDay)
 
-# Save anova_city
-write.csv(mod_room_type_wDay, file = "../../gen/analysis/output/mod_room_type_wDay.csv", fileEncoding = "UTF-8", row.names=FALSE)
+# Save output
+capture.output(mod_room_type_wDay_summary, file = "mod_roomtype_wDay_interaction_results.txt")
 
+# Move output to correct folder
+file.copy(from="../data-preparation/mod_roomtype_wDay_interaction_results.txt", to="../../gen/analysis/output/")
+
+file.remove("mod_roomtype_wDay_interaction_results.txt")
 
 # Effect size for the ANOVA's
-eta_squared(anova_1, ci=0.95, partial = TRUE) 
+eta_squared(anova_wDay, ci=0.95, partial = TRUE) 
 
-eta_squared(anova_2, ci=0.95, partial = TRUE) 
+eta_squared(anova_room_type, ci=0.95, partial = TRUE) 
 
-eta_squared(anova_3, ci=0.95, partial = TRUE) 
+eta_squared(anova_city, ci=0.95, partial = TRUE) 
 
 # Moderation effect of city and room_type
 ## city
 mod_city_wDay <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$city, data_airbnb_ANOVA$wDay))
-summary(mod_city_day)
+mod_city_wDay_summary <- summary(mod_city_wDay)
 
-# Save anova_city
-write.csv(mod_city_wDay, file = "../../gen/analysis/output/mod_city_wDay.csv", fileEncoding = "UTF-8", row.names=FALSE)
+# Save output
+capture.output(mod_city_wDay_summary, file = "mod_city_wDay_interaction_results.txt")
 
+# Move output to correct folder
+file.copy(from="../data-preparation/mod_city_wDay_interaction_results.txt", to="../../gen/analysis/output/")
+
+file.remove("mod_city_wDay_interaction_results.txt")
 
 # Tukey tests for moderation effect
-TukeyHSD(mod1)
-TukeyHSD(mod2)
+TukeyHSD(mod_room_type_wDay)
+TukeyHSD(mod_city_wDay)
 
 # Effect size of the ANOVAs with moderation effect
-eta_squared(mod1, ci=0.95, partial = TRUE) 
-eta_squared(mod2, ci=0.95, partial = TRUE)
+eta_squared(mod_room_type_wDay, ci=0.95, partial = TRUE) 
+eta_squared(mod_city_wDay, ci=0.95, partial = TRUE)
 
 # Difference in average price between weekdays and weekend days in United States 
 data_airbnb_ANOVA %>%
