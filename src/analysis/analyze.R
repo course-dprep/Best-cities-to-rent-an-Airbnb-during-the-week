@@ -59,7 +59,7 @@ mod_room_type_wDay_summary <- summary(mod_room_type_wDay)
 capture.output(mod_room_type_wDay_summary, file = "mod_roomtype_wDay_interaction_results.txt")
 
 # Move output to correct folder
-file.copy(from="../data-preparation/mod_roomtype_wDay_interaction_results.txt", to="../../gen/analysis/output/")
+file.copy(from="mod_roomtype_wDay_interaction_results.txt", to="../../gen/analysis/output/")
 
 file.remove("mod_roomtype_wDay_interaction_results.txt")
 
@@ -79,7 +79,7 @@ mod_city_wDay_summary <- summary(mod_city_wDay)
 capture.output(mod_city_wDay_summary, file = "mod_city_wDay_interaction_results.txt")
 
 # Move output to correct folder
-file.copy(from="../data-preparation/mod_city_wDay_interaction_results.txt", to="../../gen/analysis/output/")
+file.copy(from="mod_city_wDay_interaction_results.txt", to="../../gen/analysis/output/")
 
 file.remove("mod_city_wDay_interaction_results.txt")
 
