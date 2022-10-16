@@ -31,6 +31,13 @@ To run the file you must have installed to following programs:
 - [pandoc](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/pandoc/) is needed to convert a markdown file to PDF
 
 ## How to run the project  
+To run the entire project, type "make" in the command prompt and run. type make -n beforehand to check what changes will be made.
+
+Sidenotes:
+
+make has to be installed in order for it to work.
+It can take some time fo the whole project to run.
+Make sure you are in the correct directory.
 
 ## Research method
 To answer the researuch question, multiple Airbnb datasets from [Inside Airbnb](http://insideairbnb.com/get-the-data/) are combined to one dataset. The dataset contains data from 10 cites in total, 5 from the U.S. and 5 from Europe. This dataset is cleaned and prepared for anlyses, because lots of unformation was not needed to answer the research question. For more information about this read: [/src/data-preparation/README_data_preparation.md](https://github.com/course-dprep/What-happens-to-AirBnB-pricing-on-weekdays-vs-weekends/blob/master/src/data-preparation/README_data_preparation.md)
