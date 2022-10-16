@@ -37,14 +37,31 @@ leveneTest(price ~ room_type, data_airbnb_ANOVA, center=mean)
 shapiro.test(data_airbnb_ANOVA$price)
 
 # One-way ANOVA's with wDay, room_type and city as independent variable and price as dependent variable
-anova_1 <- aov(price ~ wDay, data_airbnb_ANOVA)
-summary(anova_1)
+anova_wDay <- aov(price ~ wDay, data_airbnb_ANOVA)
+summary(anova_wDay)
 
-anova_2 <- aov(price ~ room_type, data_airbnb_ANOVA)
-summary(anova_2)
+# Save anova_wDay
+write.csv(anova_wDay, file = "../../gen/analysis/output/anova_wDay_output.csv", fileEncoding = "UTF-8", row.names=FALSE)
 
-anova_3 <- aov(price ~ city, data_airbnb_ANOVA)
-summary(anova_3)
+anova_room_type <- aov(price ~ room_type, data_airbnb_ANOVA)
+summary(anova_room_type)
+
+# Save anova_room_type
+write.csv(anova_room_type, file = "../../gen/analysis/output/anova_room_type_output.csv", fileEncoding = "UTF-8", row.names=FALSE)
+
+anova_city <- aov(price ~ city, data_airbnb_ANOVA)
+summary(anova_city)
+
+# Save anova_city
+write.csv(anova_city, file = "../../gen/analysis/output/anova_city_output.csv", fileEncoding = "UTF-8", row.names=FALSE)
+
+## room_type
+mod_room_type_wDay <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$room_type, data_airbnb_ANOVA$wDay))
+summary(mod_room_type_wDay)
+
+# Save anova_city
+write.csv(mod_room_type_wDay, file = "../../gen/analysis/output/mod_room_type_wDay.csv", fileEncoding = "UTF-8", row.names=FALSE)
+
 
 # Effect size for the ANOVA's
 eta_squared(anova_1, ci=0.95, partial = TRUE) 
@@ -55,12 +72,12 @@ eta_squared(anova_3, ci=0.95, partial = TRUE)
 
 # Moderation effect of city and room_type
 ## city
-mod1 <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$city, data_airbnb_ANOVA$wDay))
-summary(mod1)
+mod_city_wDay <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$city, data_airbnb_ANOVA$wDay))
+summary(mod_city_day)
 
-## room_type
-mod2 <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$room_type, data_airbnb_ANOVA$wDay))
-summary(mod2)
+# Save anova_city
+write.csv(mod_city_wDay, file = "../../gen/analysis/output/mod_city_wDay.csv", fileEncoding = "UTF-8", row.names=FALSE)
+
 
 # Tukey tests for moderation effect
 TukeyHSD(mod1)
@@ -94,15 +111,6 @@ data_airbnb_ANOVA %>%
   group_by(city, wDay) %>%
   summarize(mean_price = mean(price))
 
-# Create output directory 
-dir.create(".../../gen/analysis/output/")
-
-# Plot price over time
-data_airbnb_ANOVA$wDay <- as.numeric(data_airbnb_ANOVA$wDay)
-dt_price <- as.data.table(data_airbnb_ANOVA)
-plot_price <- dt_price[, .(mean_price = mean(price)), 
-                       by = .(wDay, city)]
-
 data_airbnb_ANOVA_uscities <- cleaned_dataset %>% filter(united_states == TRUE)
 data_airbnb_ANOVA_uscities$wDay <- as.numeric(data_airbnb_ANOVA_uscities$wDay)
 dt_price_uscities <- as.data.table(data_airbnb_ANOVA_uscities)
@@ -116,8 +124,9 @@ plot_price_eucities <- dt_price_eucities[, .(mean_price = mean(price)),
                                          by = .(wDay, city)]
 
 #Barplot United States 
-
-ggplot(plot_price_uscities, aes(x = wDay, y =mean_price)) + geom_bar(stat = "identity") + facet_wrap(~ city)
+ggplot(plot_price_uscities, aes(x = wDay, y =mean_price)) + geom_bar(stat = "identity") + facet_wrap(~ city) 
+ggsave(filename = "../../gen/analysis/output/plot_us_cities.png", width = 15, height = 6, dpi = 100, units = "cm")
 
 #Barplot Europe
 ggplot(plot_price_eucities, aes(x = wDay, y =mean_price)) + geom_bar(stat = "identity") + facet_wrap(~ city)
+ggsave(filename = "../../gen/analysis/output/plot_eu_cities.png", width = 15, height = 6, dpi = 100, units = "cm")
