@@ -54,8 +54,6 @@ It should show:
 4) Type: make
 5) The entire project should start running from the terminal/command prompt
     
-To run the entire project, type "make" in the command prompt and run. type make -n beforehand to check what changes will be made.
-
 Sidenotes:
 
 * Make has to be installed in order for it to work.
