@@ -28,14 +28,38 @@ To run the file you must have installed to following programs:
 - [R and R-studio](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/)
 - [Make](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/)
 - [Git Bash](https://gitforwindows.org/) (windows user) of terminal (mac user)
-- [pandoc](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/pandoc/) is needed to convert a markdown file to PDF
 
-## How to run the project  
+## Required packages
+To run the entire file, a number of packages need to be installed, prior to running the makefile.
+- install.packages("tidyverse")
+- install.packages("data.table")
+- install.packages("afex")
+- install.packages("lmrTest")
+- install.packages("postHoc")
+- install.packages("car")
+- install.packages("effectsize")
+- install.packages("emmeans")
+
+## How to run the project:
+1) Clone the project to your local computer by:\
+    a) Copying the code url\
+    b) Opening a terminal/command prompt\
+    c) Typing: git clone (insert: code url)
+2) Cd to directory where the clone is located --> type: cd What-happens-to-AirBnB-pricing-on-weekdays-vs-weekends/
+3) When in the root directory --> type: make -n
+
+It should show:    
+- make -C src/data-preparation
+- make -C src/analysis
+4) Type: make
+5) The entire project should start running from the terminal/command prompt
+    
 To run the entire project, type "make" in the command prompt and run. type make -n beforehand to check what changes will be made.
 
 Sidenotes:
 
-* make has to be installed in order for it to work.
+* Make has to be installed in order for it to work.
+* R should be able to be run from the terminal/command prompt
 * It can take some time fo the whole project to run.
 * Make sure you are in the correct directory.
 
