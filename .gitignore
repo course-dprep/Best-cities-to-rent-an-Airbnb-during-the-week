@@ -7,3 +7,8 @@
 *.csv
 **pdf
 .Rproj.user
+**datafiles1.txt
+**datafiles.txt
+**.DS_Store
+**.RDataTmp
+**.RDataTmp1
