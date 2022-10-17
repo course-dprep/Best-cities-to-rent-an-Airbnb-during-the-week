@@ -39,6 +39,9 @@ From the ANOVA with the interaction between city and wDay, the conclusion is tha
 The average price of Airbnb’s during the week for cities in the United States is 285. This average price does not differ from weekend days. So with this it can be concluded that the price for cities in the United States does not differ across weekend days and weekdays. 
 - **Difference in price Wday Europe**\
 The average price of Airbnb’s during the week for cities in Europe is 186. This average price is slightly higher than the average price for weekend days. The average price for Airbnb’s on weekdays in Europe is namely 175. So there is a small difference between the price on the weekend and during the week.
+- **Differences between weekends and weekdays visualized**\
+![plot_eu_cities](https://user-images.githubusercontent.com/111459511/196128650-7cb88d6b-fdf4-42c5-9bf9-1c4b41a71ca4.png)
+![plot_us_cities](https://user-images.githubusercontent.com/111459511/196128706-0f1932de-9004-4f6d-8d69-722a23f89212.png)
 
 
 
