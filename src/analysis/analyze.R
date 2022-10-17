@@ -13,7 +13,6 @@ library(effectsize)
 library(emmeans)
 
 # Import the cleaned data 
-#setwd("../src/data-preparation")
 cleaned_dataset <- read_csv("cleaned_dataset.csv")
 
 data_airbnb_ANOVA <- sample_n(cleaned_dataset, 5000)
@@ -34,34 +33,29 @@ shapiro.test(data_airbnb_ANOVA$price)
 
 # One-way ANOVA's with wDay, room_type and city as independent variable and price as dependent variable
 anova_wDay <- aov(price ~ wDay, data_airbnb_ANOVA)
-summary(anova_wDay)
+anova_wDay_summary <- summary(anova_wDay)
 
 # Save anova_wDay
-write.csv(anova_wDay, file = "../../gen/analysis/output/anova_wDay_output.csv", fileEncoding = "UTF-8", row.names=FALSE)
+capture.output(anova_wDay_summary, file = "../../gen/analysis/output/anova_wDay_summary.txt")
 
 anova_room_type <- aov(price ~ room_type, data_airbnb_ANOVA)
-summary(anova_room_type)
+anova_room_type_summary <- summary(anova_room_type)
 
 # Save anova_room_type
-write.csv(anova_room_type, file = "../../gen/analysis/output/anova_room_type_output.csv", fileEncoding = "UTF-8", row.names=FALSE)
+capture.output(anova_room_type_summary, file = "../../gen/analysis/output/anova_room_type_summary.txt")
 
 anova_city <- aov(price ~ city, data_airbnb_ANOVA)
-summary(anova_city)
+anova_city_summary <- summary(anova_city)
 
 # Save anova_city
-write.csv(anova_city, file = "../../gen/analysis/output/anova_city_output.csv", fileEncoding = "UTF-8", row.names=FALSE)
+capture.output(anova_city_summary, file = "../../gen/analysis/output/anova_city_summary.txt")
 
 ## room_type moderator
 mod_room_type_wDay <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$room_type, data_airbnb_ANOVA$wDay))
 mod_room_type_wDay_summary <- summary(mod_room_type_wDay)
 
 # Save output
-capture.output(mod_room_type_wDay_summary, file = "mod_roomtype_wDay_interaction_results.txt")
-
-# Move output to correct folder
-file.copy(from="mod_roomtype_wDay_interaction_results.txt", to="../../gen/analysis/output/")
-
-file.remove("mod_roomtype_wDay_interaction_results.txt")
+capture.output(mod_room_type_wDay_summary, file = "../../gen/analysis/output/mod_roomtype_wDay_interaction_results.txt")
 
 # Effect size for the ANOVA's
 eta_squared(anova_wDay, ci=0.95, partial = TRUE) 
@@ -76,12 +70,7 @@ mod_city_wDay <- aov(data_airbnb_ANOVA$price ~ interaction(data_airbnb_ANOVA$cit
 mod_city_wDay_summary <- summary(mod_city_wDay)
 
 # Save output
-capture.output(mod_city_wDay_summary, file = "mod_city_wDay_interaction_results.txt")
-
-# Move output to correct folder
-file.copy(from="mod_city_wDay_interaction_results.txt", to="../../gen/analysis/output/")
-
-file.remove("mod_city_wDay_interaction_results.txt")
+capture.output(mod_city_wDay_summary, file = "../../gen/analysis/output/mod_city_wDay_interaction_results.txt")
 
 # Tukey tests for moderation effect
 TukeyHSD(mod_room_type_wDay)
