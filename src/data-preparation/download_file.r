@@ -1,7 +1,7 @@
 # Load packages
 library(tidyverse)
 #Create data folder
-dir.create("data")
+dir.create("../../data")
 
 # Input
 urls_calender = c("http://data.insideairbnb.com/united-states/co/denver/2022-09-26/data/calendar.csv.gz",
